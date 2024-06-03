@@ -1,0 +1,14 @@
+services:
+    api:
+        build:
+            context: ./server
+        ports:
+            - "5000:5000"
+        command: npm run start
+
+    app:
+        build:
+            context: ./client
+        ports:
+            - "3000:3000"
+        command: npm run start
